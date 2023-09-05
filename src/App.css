@@ -18,9 +18,48 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 400px;
+  width: 400px;
+  padding: 20px;
+  background-color: white;
+  border: 3px solid #56494E;
+  cursor: pointer;
+  transition: 0.5s all ease-out;
+  gap: 10px;
+}
+.article-title {
+  font-family: "Montserrat";
+  color: #DB324D;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.article-item:hover {
+  background-color: #DB324D;
+  color: white;
+}
+
+.article-item:hover .article-title {
+  color: white;
 }
 
 .article-img {
-  width: 300px;
+  width: 90%;
+  border: 1px solid #C3B299;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 650px) {
+  .article-item {
+    width: 50%;
+    font-size: 10px;
+  }
+
+  .article-title {
+    font-size: 14px;
+  }
+  
 }
