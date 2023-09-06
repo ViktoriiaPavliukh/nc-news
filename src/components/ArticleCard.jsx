@@ -1,25 +1,13 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getArticleById } from "../../public/api/api";
+import { getArticleById, getCommentsByArticleId } from "../../public/api/api";
+import Comments from "./Comments";
 
 
-// function ArticleCard(article) {
-//   const { article_id } = useParams();
-//     useEffect(() => {
-//       getArticleById(article_id).then((result) => {
-//         console.log(result);
-//         setSingleArticle(result.data.articles);
-
-//       })
-//     }, []);
-
-//     return <p>Article</p>
-// }
-
-// export default ArticleCard;
 const ArticleCard = () => {
   const [singleArticle, setSingleArticle] = useState({});
+  const [comments, setComments] = useState([]);
   const { article_id } = useParams();
 
   useEffect(() => {
@@ -27,6 +15,9 @@ const ArticleCard = () => {
       console.log(result);
       setSingleArticle(result);
     });
+    getCommentsByArticleId(article_id).then((result) => {
+      setComments(result)
+    })
   }, []);
 
   // const articleTitle = singleArticle.title;
@@ -49,6 +40,7 @@ const ArticleCard = () => {
       <p> {singleArticle.body} </p>
       <h6>Author: {singleArticle.author}</h6>
       <h6> Votes: {singleArticle.votes}</h6>
+      <Comments comments={comments} />
     </div>
   );
 };
