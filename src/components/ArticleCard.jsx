@@ -92,7 +92,11 @@ const ArticleCard = () => {
           </button>
         </div>
       </div>
-      <Comments comments={comments} />
+      <Comments
+        comments={comments}
+        setComments={setComments}
+        loading={loading}
+      />
     </div>
   );
 };
