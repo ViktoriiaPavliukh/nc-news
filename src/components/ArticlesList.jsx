@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getArticles } from "../../public/api/api";
-import ArticleCard from "./ArticleCard";
+
 
 const ArticlesList = () => {
     const[articles, setArticles] = useState([]);
@@ -22,7 +22,6 @@ const ArticlesList = () => {
             <p>Votes: {article.votes}</p>
           
           </li>
-         {/* <ArticleCard /> */}
           </Link>
           );
         })}

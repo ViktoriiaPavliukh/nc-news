@@ -28,6 +28,15 @@ export const getCommentsByArticleId = (article_id) => {
     });
 };
 
-// app.get("/api/articles/:article_id/comments", getCommentsByArticleId);
+export const updateVotesByArticleId = (article_id, updatedVote) => {
+  return axios
+    .patch(`${BASE_URL}/articles/${article_id}`, { votes: updatedVote })
+    .then((response) => {
+      console.log("API Response:", response.data.article);
+      return response.data.article;
+    })
+    .catch((error) => {
+      throw new Error("Failed to update votes: " + error.message);
+    });
+};
 
-// app.post("/api/articles/:article_id/comments", postComment);

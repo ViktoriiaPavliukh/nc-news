@@ -1,5 +1,9 @@
-const Comments = ({ comments }) => {
+const Comments = ({ comments, loading }) => {
   return (
+    (loading) 
+    ? 
+    <p>Loading comments...</p> 
+    :
     <div className="comments">
       <h3>Comments</h3>
       {comments.length === 0 ? (

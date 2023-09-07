@@ -1,8 +1,16 @@
 #root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+
+}
+
+ul {
+  padding: 0;
 }
 
 .article-link {
@@ -52,7 +60,15 @@
   justify-self: center;
   width: 90%;
   border: 1px solid #DB324D;
+}
 
+.article-top {
+  justify-self: left;
+  align-self: flex-start;
+  color:#56494E;
+}
+.article-top:hover{
+  color: #DB324D;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -73,6 +89,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .comments-list {
   display: flex;
+  justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 10px 10px;
@@ -87,6 +104,48 @@ p, h1, h2, h3, h4, h5, h6 {
   border: 1px solid #DB324D;
   padding: 10px;
   gap: 5px;
+}
+
+.votes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.vote-buttons {
+  display: flex;
+  gap: 5px;
+}
+.vote-btn {
+  background-color: white;
+  border: 2px solid #DB324D;
+  border-radius: 6px;
+  width: 30px;
+  height: 30px;
+  color: #DB324D;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.5s all ease-out;
+}
+
+.vote-btn:hover {
+  background-color: #DB324D;
+  color: white;
+}
+
+.vote-btn:disabled{
+  opacity: 0.5;
+  background-color: #DB324D;
+  color: white;
+}
+
+.state-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 35px;
+  font-weight: 700;
 }
 
 
