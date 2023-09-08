@@ -16,6 +16,17 @@ export const getArticleById = (article_id) => {
     });
 };
 
+export const getArticlesByTopic = (topicSlug) => {
+  return axios
+    .get(`${BASE_URL}/articles?topic=${topicSlug}`)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      throw new Error("Failed to fetch article by topic: " + error.message);
+    });
+};
+
 export const getCommentsByArticleId = (article_id) => {
   return axios
     .get(`${BASE_URL}/articles/${article_id}/comments`)
@@ -47,5 +58,9 @@ export const updateVotesByArticleId = (article_id, updatedVote) => {
     .catch((error) => {
       throw new Error("Failed to update votes: " + error.message);
     });
+};
+
+export const getTopics = () => {
+  return axios.get(`${BASE_URL}/topics`);
 };
 
