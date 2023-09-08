@@ -29,7 +29,7 @@ const TopicsList = () => {
           <li key={topic.slug} className="topic-item">
             <Link className="topic-link" to={`/articles?topic=${topic.slug}`}>
               <h2 className="topics-title">{topic.slug}</h2>
-              <p className="topic-description">Description: {topic.description}</p>
+              <p className="topic-description"> {topic.description}</p>
             </Link>
           </li>
         );
