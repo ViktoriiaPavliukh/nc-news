@@ -6,20 +6,20 @@ import Topics from "./components/TopicsList";
 import TopicPage from "./components/TopicPage";
 import Header from "./components/Header";
 import "./App.css";
+import Footer from "./components/Footer";
 
 
 function App() {
   return (
     <>
-      <Header/>
+      <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {/* <Route path="/articles" element={<ArticlesList />} /> */}
         <Route path="/articles" element={<TopicPage />} />
         <Route path="/articles/:article_id" element={<ArticleCard />} />
         <Route path="/topics" element={<Topics />} />
-        {/* <Route path="/articles?topic=topicSlug" component={<TopicPage />} /> */}
       </Routes>
+      <Footer />
     </>
   );
 }
