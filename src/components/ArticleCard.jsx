@@ -35,23 +35,22 @@ const ArticleCard = () => {
   // const lowercaseTitle = articleTitle.toLowerCase();
 
   return (
-    <div class="single-article">
+    <div className="single-article">
       <span className="article-top">
         Article {article_id} / {singleArticle.topic}
       </span>
 
-      <h3 class="article-title">{singleArticle.title}</h3>
+      {/* <h3 className="article-title">{singleArticle.title}</h3> */}
 
-      {/* <h3 class="article-title">{(singleArticle.title).toLowerCase()}</h3> */}
+      <h3 class="article-title">{(singleArticle.title).toLowerCase()}</h3>
       <img
         className="article-img"
         src={singleArticle.article_img_url}
         alt="image of article"
       />
-      {/* <h5>Published: {singleArticle.created_at.substring(0, 10)}</h5> */}
-      <h5>Published: {singleArticle.created_at}</h5>
-      <p> {singleArticle.body} </p>
+      <p className="article-body"> {singleArticle.body} </p>
       <h6>Author: {singleArticle.author}</h6>
+      <h5>Published: {singleArticle.created_at.substring(0, 10)}</h5>
       <VoteButtons article_id={article_id} initialVotes={singleArticle.votes} />
       <Comments
         comments={comments}
