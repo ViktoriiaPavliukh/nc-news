@@ -41,7 +41,7 @@ const Header = () => {
         ))}
         <li>
           <Link className="header-link" to="/articles">
-            articles
+            all articles
           </Link>
         </li>
       </ul>
