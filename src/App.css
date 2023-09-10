@@ -113,7 +113,7 @@
 .dropdown-content.open .header-link:hover {
   color: #DB324D;
 }
-.header-link:hover {
+.header-link:hover, .footer-link:hover {
   background-color: white;
   color: #DB324D;
 }
@@ -139,6 +139,9 @@ ul {
   text-decoration: none;
   color: black;
 }
+ .article-body {
+    padding-top: 30px;
+  }
 
 .article-list, .articles-topic, .topics-list {
   list-style: none;
@@ -162,11 +165,25 @@ ul {
   transition: 0.5s all ease-out;
   gap: 10px;
 }
+
+.article-columns {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
 .article-title {
+  padding-top: 30px;
+  font-size: 18px;
   font-family: "Montserrat";
   color: #DB324D;
   font-weight: 600;
   text-transform: capitalize;
+  margin-bottom: 25px;
+}
+
+.article-data {
+  padding-top: 20px;
+  color: #56494E;
 }
 
 .article-item:hover {
@@ -181,12 +198,12 @@ ul {
 .article-img {
   display: flex;
   justify-self: center;
-  width: 90%;
+  width: 100%;
   border: 1px solid #DB324D;
 }
 
 .article-top {
-  justify-self: left;
+  padding-top: 20px;
   align-self: flex-start;
   color:#56494E;
 }
@@ -211,6 +228,17 @@ p, h1, h2, h3, h4, h5, h6 {
   gap: 10px;
 }
 
+.comments {
+  display: flex;
+  flex-direction: column;
+}
+
+.comments-title {
+  padding-top: 2rem;
+  font-size: 30px;
+  color: #DB324D;
+}
+
 .comments-list {
   display: flex;
   justify-content: center;
@@ -226,6 +254,8 @@ p, h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   flex-wrap: wrap;
   width: 30%;
+  overflow-wrap: break-word;
+  word-break: break-all;
   border: 1px solid #DB324D;
   padding: 10px;
   gap: 5px;
@@ -246,20 +276,22 @@ p, h1, h2, h3, h4, h5, h6 {
   gap: 5px;
 }
 .vote-btn {
-  background-color: white;
+  font-family: "Montserrat";
+  font-weight: 600;
+  background-color: #DB324D;
   border: 2px solid #DB324D;
   border-radius: 6px;
   width: 30px;
   height: 30px;
-  color: #DB324D;
+  color: white;
   font-size: 20px;
   cursor: pointer;
   transition: 0.5s all ease-out;
 }
 
 .vote-btn:hover, .add-btn:hover {
-  background-color: #DB324D;
-  color: white;
+  background-color: white;
+  color: #DB324D;
 }
 
 .vote-btn:disabled{
@@ -284,11 +316,12 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .comment-adder {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
-  justify-self: left;
+  justify-content: center;
   align-items: center;
   padding: 20px;
-  margin: 30px;
+  margin: 20px;
 }
 
 .new-comment {
@@ -296,18 +329,20 @@ p, h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: left;
   align-items: center;
-  width: 300px;
+  width: 50%;
   padding: 10px 20px;
   border: 1px solid #DB324D;
   border-radius: 6px;
 }
 
 .add-btn {
-  background-color: white;
-  border: 2px solid #DB324D;
+  font-family: "Montserrat";
+  font-weight: 600;
+  background-color:#DB324D;
+  border: 1px solid #DB324D;
   border-radius: 6px;
   padding: 10px 20px;
-  color: #DB324D;
+  color: white;
   font-size: 20px;
   cursor: pointer;
   transition: 0.5s all ease-out;
@@ -403,11 +438,17 @@ p, h1, h2, h3, h4, h5, h6 {
     font-size: 10px;
   }
 
-  .article-title {
-    font-size: 14px;
-  }
+
   .comment-item {
-    width: 90%;
-  }
   
+    width: 375px;
+  }
+
+  .comment-adder {
+    flex-direction: column;
+  }
+
+  .new-comment {
+    max-width: 375px;
+  }
 }

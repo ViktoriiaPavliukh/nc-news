@@ -19,10 +19,10 @@ const Comments = ({ comments, loading, setComments }) => {
     setNewComment("");
   }
   return loading ? (
-    <p>Loading comments...</p>
+    <p className="state-loading">Loading comments...</p>
   ) : (
     <div className="comments">
-      <h3>Comments</h3>
+      <h3 className="comments-title">Comments</h3>
       <form className="comment-adder" onSubmit={handleSubmit}>
         <label htmlFor="newComment">Add a comment</label>
         <textarea
@@ -42,8 +42,7 @@ const Comments = ({ comments, loading, setComments }) => {
             <li key={comment.comment_id} className="comment-item">
               <p className="comment-body">{comment.body}</p>
               <span>{comment.votes}</span>
-              <h6>Author: {comment.author}</h6>
-              <h6>Created: {comment.created_at}</h6>
+              <h6>Created: {comment.created_at.substring(0, 10)}</h6>
             </li>
           ))}
         </ul>

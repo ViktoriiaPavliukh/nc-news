@@ -29,7 +29,7 @@ const Header = () => {
       </Link>
       <ul className="nav">
         {topics.map((topic) => (
-          <li>
+          <li key={topic.slug}>
             <Link
               key={topic.slug}
               className="header-link"
@@ -39,7 +39,7 @@ const Header = () => {
             </Link>
           </li>
         ))}
-        <li>
+        <li key={"all articles"}>
           <Link className="header-link" to="/articles">
             all articles
           </Link>
@@ -53,7 +53,7 @@ const Header = () => {
         ></button>
         <ul className={`dropdown-content ${isDropdownOpen ? "open" : ""}`}>
           {topics.map((topic) => (
-            <li>
+            <li key={topic.slug}>
               <Link
                 key={topic.slug}
                 className="header-link"
@@ -63,7 +63,7 @@ const Header = () => {
               </Link>
             </li>
           ))}
-          <li>
+          <li key="all">
             <Link className="header-link" to="/articles">
               All Articles
             </Link>
