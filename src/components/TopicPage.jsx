@@ -25,7 +25,7 @@ const TopicPage = () => {
   }, [topicSlug]);
 
   if (loading) {
-    return <p className="state-loading topics">Loading articles...</p>;
+    return <p className="state-loading">Loading articles...</p>;
   }
 
   return (

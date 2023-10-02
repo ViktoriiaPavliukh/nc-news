@@ -45,9 +45,9 @@ const Header = () => {
           </Link>
         </li>
       </ul>
-      <div class="mob-menu-button">
+      <div className="mob-menu-button">
         <button
-          class="menu-button"
+          className="menu-button"
           onClick={toggleDropdown}
           type="submit"
         ></button>

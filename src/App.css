@@ -9,6 +9,10 @@
 
 }
 
+.homepage {
+  min-height: 75vh;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -123,6 +127,12 @@
   color: #56494E;
 }
 
+.list-title {
+  font-size: 24px;
+  padding-top: 2rem;
+  color: white;
+}
+
 .topic-title {
   margin-bottom: 2rem;
 }
@@ -150,6 +160,7 @@ ul {
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
+  min-height: 75vh;
 }
 
 .article-item {
@@ -186,6 +197,15 @@ ul {
   color: #56494E;
 }
 
+.article-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
 .article-item:hover {
   background-color: #DB324D;
   color: white;
@@ -211,6 +231,13 @@ ul {
   color: #DB324D;
 }
 
+.author-name, .article-likes {
+  font-weight: 600;
+}
+.article-creation {
+  display: flex;
+  flex-direction: column;
+}
 p, h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin: 0;
@@ -253,6 +280,7 @@ p, h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  justify-content:space-between;
   width: 30%;
   overflow-wrap: break-word;
   word-break: break-all;
@@ -263,7 +291,12 @@ p, h1, h2, h3, h4, h5, h6 {
 .comment-body {
   display: flex;
   flex-wrap: wrap;
-  
+}
+.comment-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color:#DB324D;
 }
 .votes {
   display: flex;
@@ -310,7 +343,7 @@ p, h1, h2, h3, h4, h5, h6 {
   padding: 50vh;
 }
 
-.state-loading.topics {
+.state-loading-topics {
   color: white;
 }
 
@@ -383,7 +416,7 @@ p, h1, h2, h3, h4, h5, h6 {
   padding: 2rem;
   background-color: white;
   color: #DB324D;
-  width: 30%;
+  width: 50%;
   border: 3px solid;
   transition: 0.5s all ease-out;
   border-radius: 6px;
@@ -394,7 +427,7 @@ p, h1, h2, h3, h4, h5, h6 {
   padding: 2rem;
   background-color: #DB324D;
   color: white;
-  width: 50%;
+  width: 100%;
 }
 .topic-item:hover .topics-title {
   color: white;
@@ -433,6 +466,15 @@ p, h1, h2, h3, h4, h5, h6 {
     display: none;
   }
 
+  .topics-list {
+    flex-direction: column;
+  }
+
+  .topic-item {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
   .article-item, .item-topicpage {
     width: 90%;
     font-size: 10px;
@@ -440,7 +482,6 @@ p, h1, h2, h3, h4, h5, h6 {
 
 
   .comment-item {
-  
     width: 375px;
   }
 

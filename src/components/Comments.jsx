@@ -41,8 +41,10 @@ const Comments = ({ comments, loading, setComments }) => {
           {comments.map((comment) => (
             <li key={comment.comment_id} className="comment-item">
               <p className="comment-body">{comment.body}</p>
-              <span>{comment.votes}</span>
-              <h6>Created: {comment.created_at.substring(0, 10)}</h6>
+              <div className="comment-details">
+                <p className="data">{comment.created_at.substring(0, 10)}</p>
+                <span>Likes: {comment.votes}</span>
+              </div>
             </li>
           ))}
         </ul>

@@ -19,22 +19,25 @@ const TopicsList = () => {
   }, []);
 
   if (loading) {
-    return <p>Loading topics...</p>;
+    return <p className="state-loading topics">Loading topics...</p>;
   }
 
   return (
-    <ul className="topics-list">
-      {topics.map((topic) => {
-        return (
-          <li key={topic.slug} className="topic-item">
-            <Link className="topic-link" to={`/articles?topic=${topic.slug}`}>
-              <h2 className="topics-title">{topic.slug}</h2>
-              <p className="topic-description"> {topic.description}</p>
-            </Link>
-          </li>
-        );
-      })}
-    </ul>
+    <div>
+      <h3 className="list-title">Choose topic</h3>
+      <ul className="topics-list">
+        {topics.map((topic) => {
+          return (
+            <li key={topic.slug} className="topic-item">
+              <Link className="topic-link" to={`/articles?topic=${topic.slug}`}>
+                <h2 className="topics-title">{topic.slug}</h2>
+                <p className="topic-description"> {topic.description}</p>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
   );
 };
 export default TopicsList;

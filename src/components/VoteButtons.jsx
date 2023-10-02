@@ -24,7 +24,7 @@ const VoteButtons = ({ article_id, initialVotes }) => {
 
   return (
     <div className="votes">
-      <h6> Votes: {votes}</h6>
+      <h6> Your vote: {votes}</h6>
       <div className="vote-buttons">
         <button
           className="vote-btn"

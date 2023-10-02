@@ -3,9 +3,8 @@ import TopicsList from "./TopicsList";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="homepage">
     <TopicsList />
-    <ArticlesList />
     </div>
     )
 };
